@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import mongoose from "mongoose";
 
 const userSchema = new mongoose.Schema({
@@ -23,3 +24,34 @@ const userSchema = new mongoose.Schema({
 }, { timestamps: true });
 
 export default mongoose.model("User", userSchema);
+=======
+import mongoose from "mongoose";
+
+const userSchema= new mongoose.Schema(
+    {
+        emails : {
+            type:String,
+            required : true,
+            unique: true
+        },
+        fullName : {
+            type : String,
+            required : true,
+        },
+        password : {
+            type : String,
+            required : true,
+            minlength : 6,
+        },
+        profilePic : {
+            type : String,
+            default : "",
+        },
+
+    },{timestamps: true}
+);
+
+const User = mongoose.model("User", userSchema);
+
+export default User;
+>>>>>>> 108db9fb6070fdfbcdcff7aa7def3a218930971f

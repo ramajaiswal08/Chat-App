@@ -1,3 +1,4 @@
+
 import User from "../models/user.models.js";
 import bcrypt from "bcryptjs";
 import { generateToken } from "../lib/utils.js";
@@ -120,4 +121,3 @@ export const checkAuth = (req,res) => {
     res.status(500).json({message:"Internal Server Error"});
   }
 }
-
